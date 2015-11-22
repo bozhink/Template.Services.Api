@@ -3,12 +3,14 @@
     using System;
     using System.Web;
 
+    using Common.Constants;
     using Common.Providers;
 
     using Data;
     using Data.Repositories;
 
     using Ninject;
+    using Ninject.Extensions.Conventions;
     using Ninject.Web.Common;
 
     public static class NinjectConfig
@@ -38,6 +40,11 @@
             kernel.Bind(typeof(IRepository<>)).To(typeof(EfGenericRepository<>));
 
             kernel.Bind<IRandomProvider>().To<RandomProvider>();
+
+            kernel.Bind(b => b
+                .From(Assemblies.DataServices)
+                .SelectAllClasses()
+                .BindDefaultInterface());
         }
     }
 }
