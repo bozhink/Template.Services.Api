@@ -11,7 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{E469BFC8-655
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application.Data", "Data\Application.Data\Application.Data.csproj", "{FDBE3581-9F3F-473A-9EFB-43CF7041BF44}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application.Models", "Data\Application.Models\Application.Models.csproj", "{CFCB2F54-4B21-4596-B0C0-E34487C10A76}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application.Data.Models", "Data\Application.Data.Models\Application.Data.Models.csproj", "{CFCB2F54-4B21-4596-B0C0-E34487C10A76}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application.Web.Api", "Web\Application.Web.Api\Application.Web.Api.csproj", "{B861CEE3-869B-4C99-B75D-A7A3A54826C3}"
 EndProject

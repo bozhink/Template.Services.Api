@@ -213,7 +213,6 @@
     </Compile>
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
@@ -283,6 +282,16 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Data\Application.Data\Application.Data.csproj">
+      <Project>{fdbe3581-9f3f-473a-9efb-43cf7041bf44}</Project>
+      <Name>Application.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Data\Application.Data.Models\Application.Data.Models.csproj">
+      <Project>{cfcb2f54-4b21-4596-b0c0-e34487c10a76}</Project>
+      <Name>Application.Data.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
