@@ -3,6 +3,8 @@
     using System;
     using System.Web;
 
+    using Common.Providers;
+
     using Data;
     using Data.Repositories;
 
@@ -34,6 +36,8 @@
             kernel.Bind<IDbContext>().To<ApplicationDbContext>();
 
             kernel.Bind(typeof(IRepository<>)).To(typeof(EfGenericRepository<>));
+
+            kernel.Bind<IRandomProvider>().To<RandomProvider>();
         }
     }
 }

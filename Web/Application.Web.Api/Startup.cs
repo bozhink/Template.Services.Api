@@ -6,6 +6,9 @@ using Owin;
 namespace Application.Web.Api
 {
     using System.Web.Http;
+
+    using Application.Common.Constants;
+
     using Ninject.Web.Common.OwinHost;
     using Ninject.Web.WebApi.OwinHost;
 
@@ -13,6 +16,8 @@ namespace Application.Web.Api
     {
         public void Configuration(IAppBuilder app)
         {
+            AutoMapperConfig.RegisterMappings(Assemblies.WebApi);
+
             this.ConfigureAuth(app);
 
             var httpConfig = new HttpConfiguration();
