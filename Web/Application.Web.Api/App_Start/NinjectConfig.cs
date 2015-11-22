@@ -15,6 +15,13 @@
 
     public static class NinjectConfig
     {
+        public static Action<IKernel> DependenciesRegistration = kernel =>
+        {
+            kernel.Bind<IDbContext>().To<ApplicationDbContext>();
+
+            kernel.Bind(typeof(IRepository<>)).To(typeof(EfGenericRepository<>));
+        };
+
         public static IKernel CreateKernel()
         {
             var kernel = new StandardKernel();
@@ -35,9 +42,7 @@
 
         private static void RegisterServices(IKernel kernel)
         {
-            kernel.Bind<IDbContext>().To<ApplicationDbContext>();
-
-            kernel.Bind(typeof(IRepository<>)).To(typeof(EfGenericRepository<>));
+            DependenciesRegistration(kernel);
 
             kernel.Bind<IRandomProvider>().To<RandomProvider>();
 

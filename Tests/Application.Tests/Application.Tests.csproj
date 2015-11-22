@@ -168,6 +168,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ControllerTests\" />
+    <Folder Include="IntegrationTests\" />
     <Folder Include="Setups\" />
   </ItemGroup>
   <ItemGroup>
