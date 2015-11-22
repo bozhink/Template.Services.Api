@@ -1,9 +1,9 @@
 ﻿namespace Application.Data
 {
+    using System.Data.Entity;
+    using Microsoft.AspNet.Identity.EntityFramework;
     using Models;
     using Repositories;
-    using Microsoft.AspNet.Identity.EntityFramework;
-    using System.Data.Entity;
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>, IDbContext
     {
@@ -12,18 +12,18 @@
         {
         }
 
+        public static ApplicationDbContext Create()
+        {
+            return new ApplicationDbContext();
+        }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            ////modelBuilder
+            //// modelBuilder
             ////    .Entity<ApplicationUser>()
             ////    .HasMany
 
             base.OnModelCreating(modelBuilder);
-        }
-
-        public static ApplicationDbContext Create()
-        {
-            return new ApplicationDbContext();
         }
     }
 }

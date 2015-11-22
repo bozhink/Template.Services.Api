@@ -1,8 +1,9 @@
 ﻿namespace Application.Web.Api
 {
+    using System.Data.Entity;
+
     using Data;
     using Data.Migrations;
-    using System.Data.Entity;
 
     public static class DatabaseConfig
     {

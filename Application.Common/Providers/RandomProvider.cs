@@ -4,11 +4,11 @@
 
     public class RandomProvider : IRandomProvider
     {
-        private readonly static Random random = new Random();
+        private static readonly Random Random = new Random();
 
         public int GetRandomNumber(int min, int max)
         {
-            return random.Next(min, max + 1);
+            return Random.Next(min, max + 1);
         }
     }
 }
