@@ -1,9 +1,8 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-using Newtonsoft.Json;
-
-namespace Application.Web.Api.Models
+﻿namespace Application.Web.Api.Models.Account
 {
+    using System.ComponentModel.DataAnnotations;
+    using Newtonsoft.Json;
+
     // Models used as parameters to AccountController actions.
 
     public class AddExternalLoginBindingModel

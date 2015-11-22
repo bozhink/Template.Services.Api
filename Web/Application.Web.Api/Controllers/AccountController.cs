@@ -10,7 +10,7 @@
     using System.Web.Http;
 
     using Application.Data.Models;
-    using Application.Web.Api.Models;
+    using Application.Web.Api.Models.Account;
     using Application.Web.Api.Providers;
     using Application.Web.Api.Results;
     using Microsoft.AspNet.Identity;
